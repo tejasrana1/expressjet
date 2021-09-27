@@ -27,21 +27,21 @@ function App() {
     <div className="App">
       
       <Switch>
-        <Route  exact path="https://expressjet.netlify.app/" children={<Login   />} /> 
-        <Route  exact path="https://expressjet.netlify.app/home" children={<Home />} /> 
-        <Route  exact path="https://expressjet.netlify.app/change" children={<ChangePass   />} />
-        <Route  exact path="https://expressjet.netlify.app/changeDetails" children={<ChangeDetails  />} />
-        <Route  exact path="https://expressjet.netlify.app/todo" children={<ToDo />} />
-        <Route  exact path="https://expressjet.netlify.app/createtodo" children={<CreateTodo />} />
-        <Route  exact path="https://expressjet.netlify.app/leaderboard" children={<Leaderboard />} />
-        <Route  exact path= "https://expressjet.netlify.app/forgot" children = {<ForgotPassword />} />
-        <Route  exact path= "https://expressjet.netlify.app/books" children = {<Books />} />
-        <Route exact path="https://expressjet.netlify.app/profile" children = {<Profile />} />
-        <Route exact path="https://expressjet.netlify.app/about" children = {<About />} />
-        <Route path="https://expressjet.netlify.app/join" exact component={Join} />
-        <Route path="https://expressjet.netlify.app/chat" component={Chat} />
-        <Route exact path="https://expressjet.netlify.app/video" children = {<VideoCall />} />
-        <Route exact path="https://expressjet.netlify.app/:postid/post" children = {<Post />} />
+        <Route  exact path="/" children={<Login   />} /> 
+        <Route  exact path="/home" children={<Home />} /> 
+        <Route  exact path="/change" children={<ChangePass   />} />
+        <Route  exact path="/changeDetails" children={<ChangeDetails  />} />
+        <Route  exact path="/todo" children={<ToDo />} />
+        <Route  exact path="/createtodo" children={<CreateTodo />} />
+        <Route  exact path="/leaderboard" children={<Leaderboard />} />
+        <Route  exact path= "/forgot" children = {<ForgotPassword />} />
+        <Route  exact path= "/books" children = {<Books />} />
+        <Route exact path="/profile" children = {<Profile />} />
+        <Route exact path="/about" children = {<About />} />
+        <Route path="/join" exact component={Join} />
+        <Route path="/chat" component={Chat} />
+        <Route exact path="/video" children = {<VideoCall />} />
+        <Route exact path="/:postid/post" children = {<Post />} />
         <Route  path="*" component={fourOfour} />
       </Switch>
     </div>
