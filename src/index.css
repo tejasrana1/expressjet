@@ -1,13 +1,429 @@
 body {
+  background: #f0f2f5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(211, 211, 211, 0.801);
+}
+html {
+  overflow-y: scroll;
+  background: #f0f2f5;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.homePage {
+  background: #f0f2f5;
+}
+.posts {
+  background: #f0f2f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background: #f0f2f5;
+}
+.outerContainer {
+  background: #f0f2f5;
+  margin: 50px auto;
+  width: 50%;
+}
+.bookimg {
+  border-radius: 5px;
+  height: 300px;
+  width: 200px;
+  transition: 500ms;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+.bookinfo {
+  margin: auto;
+  z-index: 2;
+  margin-top: -220px;
+  width: 190px;
+  cursor: pointer;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  transform: scale(0);
+}
+.txtArea {
+  width: 100%;
+}
+.postText {
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+}
+.bookinfo h2 {
+  margin-bottom: 20px;
+}
+.overlay {
+  border-radius: 5px;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+  width: 200px;
+  height: 300px;
+  background-color: grey;
+  visibility: hidden;
+}
+.book:hover .bookimg {
+  filter: blur(5px);
+}
+.book {
+  display: inline-block;
+}
+.navLink {
+  margin: auto 15px;
+}
+.dropdown-menu {
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none !important;
+}
+.book:hover .bookinfo {
+  transition: 500ms;
+  color: black;
+  z-index: 2;
+  opacity: 1;
+  transform: scale(1);
+}
+video {
+  transform: rotateY(180deg);
+}
+.book:hover .overlay {
+  transition: 500ms;
+  z-index: 1;
+  visibility: visible;
+}
+.book a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  .outerContainer {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .outerContainer {
+    width: 95%;
+  }
+}
+.postBody {
+  background: white;
+  text-align: left;
+  width: 100%;
+  margin: 20px auto;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 10px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.postUser {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+}
+.postUser p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: lighter;
+  color: grey;
+  margin: 0;
+}
+.postUser Button:hover {
+  color: #f50057;
+  background-color: white;
+}
+.commentName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.commentName p {
+  margin: 0;
+}
+.commentName Button {
+  border: none;
+  margin-left: 5px;
+}
+.commentBox {
+  box-shadow: rgba(151, 26, 26, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.createChallenge,
+.leaderboard,
+.challenge {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  padding: 50px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
+
+.createChallenge .taskInput,
+.numberInput {
+  border-radius: 5px;
+  border: 1px solid #3f51b5;
+  margin: 5px;
+  padding: 6px;
+}
+.taskInput {
+  width: 200px !important;
+}
+.numberInput {
+  width: 80px !important;
+}
+
+.createChallenge ::placeholder {
+  /* font-family: none; */
+  opacity: 0.5;
+  color: #f50057;
+}
+.createChallenge .toggleButton {
+  width: 140px !important;
+  padding: 8.5px 1px !important;
+  padding-left: 9px !important;
+  margin: 5px;
+  background-color: white;
+}
+.createChallenge .submitButton {
+  width: 290px !important;
+  padding: 10px;
+  margin: 10px;
+}
+.MuiDataGrid-root {
+  width: 452px !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+.postUser Button {
+  margin-left: 50px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap");
+.postText {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
+}
+.commentText {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  margin-top: 0;
+}
+.comment input[type="text"] {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 50%;
+  outline: none;
+}
+.comment Button {
+  position: relative;
+  top: -2px;
+  padding: 7.5px 0 !important;
+  padding-left: 10px !important;
+}
+@media only screen and (max-width: 768px) {
+  .comment input[type="text"] {
+    width: 75%;
+  }
+}
+Navbar {
+  position: fixed !important;
+}
+.books th {
+  text-align: left;
+  font-size: 1.6rem;
+}
+.books td {
+  font-size: 1.3rem;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .books th {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+  .books td {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+.changePass input[type="password"] {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+.changeDetails input,
+.forgot input,
+input[type="search"] {
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: 5px !important;
+  padding: 5px;
+  outline: none;
+  width: 300px;
+}
+.changePass input[type="password"],
+.fb {
+  margin: 5px !important;
+  padding: 5px;
+  outline: none;
+  width: 300px;
+}
+.fb {
+  padding: 6px 0 !important;
+}
+.fcover {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 40%;
+  transform: translateX(-40%);
+}
+.disclaimer {
+  background-color: white;
+  margin: auto;
+}
+.books .search {
+  margin: 30px;
+}
+.books td a {
+  text-decoration: none;
+}
+
+.main-body {
+  padding: 15px;
+}
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem !important;
+}
+.profile {
+  text-align: center;
+}
+.challenge table {
+  margin: auto;
+  margin-top: 30px;
+  text-align: left;
+}
+.challenge Button {
+  border: none;
+}
+.aboutPage {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+}
+.website,
+.personal {
+  width: 80%;
+  margin: auto;
+}
+.website span {
+  font-weight: bold;
+}
+.loginPage .container {
+  margin: auto !important;
+}
+.loginPage {
+  font-family: "Montserrat", sans-serif;
+}
+
+.lsContainer {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .lsContainer {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .lsContainer {
+    width: 95%;
+  }
+}
+.loginPage #span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.loginPage .heading {
+  font-size: 2rem;
+  color: black;
+}
+.loginPage h1 {
+  font-size: 3rem;
+}
+.spanContainer {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+}
+.spanContainer .login {
+  background-color: #3f51b5;
+  color: white;
+}
+.spanContainer .register {
+  background-color: #ffb52e;
+  color: white;
+}
+.loginPage input {
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 5px;
+  margin: 10px;
+  width: 60%;
+}
+.loginPage .MuiButton-containedSecondary {
+  background-color: #ffb52e;
+}
+
+.loginPage .MuiButton-containedSecondary:hover {
+  background-color: #d18700;
 }
