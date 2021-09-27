@@ -10,6 +10,7 @@ function About(){
             <h1>ExpressInfo</h1>
             <div className="website">
                 <h4>About the site</h4>
+                <p><span>ExpressJet:</span> ExpressJet is a social media site made for letting users grow by doing some meaningful/productive tasks while staying connected.</p>
                 <p><span>Navbar:</span> Click on ExpressJet to go to home and navigate accordingly</p>
                 <p><span>Home:</span> If you want to post something anonymously then there is a option to do that just click on the post button and select anonymous from the popup.</p>
                 <p><span>Challenge:</span> User can create challenge on Sunday, the first challenge created will be accepted. Challenge duration can be from 100 minutes to 120 minutes.Challenges are completed from Monday to Friday and points are given according to it.</p>
