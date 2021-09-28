@@ -33,7 +33,7 @@ var objToday = new Date(),
     })
     useEffect(()=>{
         $.get("https://expressjetapi.herokuapp.com/post")
-        .done((res)=>{
+        .done((res)=>{console.log(res);
             setAll({value: res.reverse()})
         })
         .fail(e=>{return ;})
