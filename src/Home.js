@@ -106,7 +106,7 @@ var objToday = new Date(),
                     <div className="cheader">
                         
                         <Link to={{
-                  pathname: `/${props.id}/post`}}>Comments</Link>
+                  pathname: `/${props.id}/post`}}>{props.comment.length} Comments</Link>
                   {/* <p>{singleComment}</p> */}
                     </div>
                 <form className="cfooter" onSubmit={sendComment}>
