@@ -19,7 +19,7 @@ function ForgotPassword(){
             history.push("/")
 
         })
-        .fail (e=>{alert("Some error occured. Try again")})
+        .fail (e=>{console.log(e); alert("Some error occured. Try again")})
     }
     return (
         
